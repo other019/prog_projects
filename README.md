@@ -3,12 +3,12 @@ repo for programing projects based on: http://liquidthink.net/wp-content/uploads
 
 1. Name Generator
 2. Higher or lower
-3. Temperature converter
+3. [Temperature converter](https://github.com/other019/prog_projects/tree/master/3)
 4. Simple encryption
 5. [FizzBuzz](https://github.com/other019/prog_projects/tree/master/5)
 6. Rock Paper Scissors
 7. Hangman
-9. Love Calculator
+8. [Love Calculator](https://github.com/other019/prog_projects/tree/master/8)
 9. Pseudorandom quote generator
 10. Password Generator
 11. Atomically correct time from an internet clock
