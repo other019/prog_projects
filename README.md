@@ -5,7 +5,7 @@ repo for programing projects based on: http://liquidthink.net/wp-content/uploads
 2. Higher or lower
 3. Temperature converter
 4. Simple encryption
-5. FizzBuzz
+5. [FizzBuzz](https://github.com/other019/prog_projects/tree/master/5)
 6. Rock Paper Scissors
 7. Hangman
 9. Love Calculator
