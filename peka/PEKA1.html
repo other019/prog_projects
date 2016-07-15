@@ -1,0 +1,2926 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+	<head>
+		<title>PEKA</title>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+		<meta name="description" content="#" lang="pl-PL" />
+		<meta name="keywords" content="#" lang="pl-PL" />
+		<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+	</head>
+	
+	<body>
+	
+		
+		
+			
+			
+		
+	
+		<div id="wrapper">
+			
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/SOP/css/ui-lightness/jquery-ui-1.9.2.custom.css" />
+<link type="text/css" rel="stylesheet" href="/SOP/css/common.css" />
+<link type="text/css" rel="stylesheet" href="/SOP/css/normalize.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/SOP/css/jquery.cookiebar.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/SOP/css/jquery.Jcrop.css" />
+<link type="text/css" rel="stylesheet" href="/SOP/css/chosen.min.css" />
+<link type="text/css" rel="stylesheet" href="/SOP/css/jquery.dataTables.css" />
+
+<script type="text/javascript" src="/SOP/js/jquery.js"></script>
+<script type="text/javascript" src="/SOP/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="/SOP/js/jquery.maskedinput-1.3.min.js"></script>
+<script type="text/javascript" src="/SOP/js/jquery.chosen.min.js"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script type="text/javascript" src="/SOP/js/markerwithlabel.min.js"></script>
+
+<script language="javascript" type="text/javascript" src="/SOP/js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script language="javascript" type="text/javascript" src="/SOP/js/jquery.ui.datepicker-pl.js"></script>
+<script language="javascript" type="text/javascript" src="/SOP/js/jquery.ui.datepicker-en.js"></script>
+<script language="javascript" type="text/javascript" src="/SOP/js/jquery.Jcrop.min.js"></script>
+<script language="javascript" type="text/javascript" src="/SOP/js/jquery.dataTables.min.js"></script>
+
+<script language="javascript" type="text/javascript" src="/SOP/js/jquery.cookiebar.js"></script>	
+<script type="text/javascript" src="/SOP/js/custominputs.js"></script>
+<script type="text/javascript" src="/SOP/js/main.js"></script>
+
+
+
+
+
+<input type="hidden" id="locale" value="pl"/>
+<input type="hidden" id="initPatch" value="/SOP/"/>
+
+<div id="header">
+	
+		
+		<div id="top">
+			<a href="http://www.peka.poznan.pl/web/portal" class="logo"><img src="/SOP/img/logo/peka-logo.png" alt="PEKA Poznańska Elektroniczna Karta Aglomeracyjna" /></a>
+			
+			<span class="login-box">
+				<span class="welcome">Witaj <span class="name">Marcel</span></span>
+				<a href="logout.jspb" class="logout-btn pl">Wyloguj się</a>
+			</span>
+		</div>
+		
+	
+	
+	
+	<div id="navigation-wrapper">
+	<div class="navigation-inner-wrapper">
+		<ul id="navigation">
+			<li>
+				<a href="/"></a>
+			</li>
+			<li> <a href="http://www.peka.poznan.pl/web/portal/aktualnosci" class="two-words">Dla<br>kogo PEKA</a></li>
+			<li><a class="two-words" href="http://www.peka.poznan.pl/web/portal/obsluga-klienta">taryfa<br>biletowa</a></li> 
+			<li><a class="two-words" href="http://www.peka.poznan.pl/web/portal/siec-sprzedazy">Sprzedaż<br/>i obsługa</a></li> 
+			<li> <a href="http://www.peka.poznan.pl/web/portal/czytnik" class="two-words">Obsługa<br>czytnika</a> </li>
+			<li><a class="two-words" href="http://www.peka.poznan.pl/web/portal/system-peka">Program<br>premiowy</a></li> 
+			<li><a class="two-words" href="http://www.peka.poznan.pl/web/portal/pytania-i-odpowiedzi">PYTANIA I<br/> ODPOWIEDZI</a></li> 
+			<li class="active"><a class="two-words" href="https://www.peka.poznan.pl/SOP/account/home.jspb">TWOJE<br/>KONTO</a></li> 
+		</ul>
+		<div id="search-wrapper" class="google-search">
+    					    <script>
+                              (function() {
+                                var cx = '015046081758765388558:zulrg3tvoe8';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                    '//www.google.com/cse/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                console.log(gcse);
+                                s.parentNode.insertBefore(gcse, s);
+                              })();
+                            </script>
+                           <gcse:searchbox-only newWindow="false" resultsUrl="http://peka.poznan.pl/web/portal/wyniki-wyszukiwania"></gcse:searchbox-only>
+    					</div>
+    					
+		</div>
+	</div>
+	
+	<div id="navigation-level-2"> 
+		
+		<ul> 
+			<li
+				
+			>
+				<a href="/SOP/account/home.jspb">Moje konto</a>
+			</li>
+			
+			<li
+				 class="active"
+			>
+				<a href="/SOP/account/transaction_history.jspb">Historia transakcji</a>
+			</li>  
+			
+			<li
+				
+			>
+				<a href="/SOP/account/applications.jspb">Wnioski i reklamacje</a>
+			</li>
+			<li
+				
+			>
+				<a href="/SOP/account/complaints.jspb">Historia reklamacji</a>
+			</li>
+<!--			
+			<li
+				
+			>
+				<a href="/SOP/account/complaints.jspb">Historia reklamacji</a>
+			</li>
+-->				
+			
+			
+				<li
+					
+				>
+					<a href="/SOP/account/loyaltyPoints.jspb">Program premiowy</a>
+				</li>	
+			
+			
+			<li class="right cart">
+				
+				
+					<a href="/SOP/account/shopping_basket.jspb">Koszyk</a>
+							
+			</li>
+
+		</ul> 
+		
+		
+		
+		
+		
+	</div> 
+	
+	<div id="lang">
+		
+		
+			<span class="links">
+				
+				
+					<a class = "link" href="/SOP/account/transaction_history.jspb?execution=e3s4&locale=en">english version</a>
+				
+			</span>
+		
+	</div>
+
+</div>
+			
+			<div id="content-wrapper">
+				<div class="page-header">
+					<h1 class="page-title header-register">
+						Historia transakcji dla karty: 
+						<a href="/SOP/account/transaction_history.jspb?execution=e3s4&_eventId=cardsList">0438882031</a>
+					</h1>
+				</div>
+				
+				
+
+
+
+
+
+<ul class="tabs">
+    
+    
+     
+     
+     	
+     
+     	
+     	
+     		
+     			
+     			
+     		
+     		
+     	
+     	
+     	<li class='active'>
+     		<a href="#">
+     			<span class="tab-inner">tPortmonetka - przejazdy</span>
+     		</a>
+     	</li>
+     
+     	
+     
+     	
+     	
+     		
+     		
+     			
+     			
+     		
+     	
+     	
+     	<li  >
+     		<a href="/SOP/account/transaction_history.jspb?execution=e3s4&_eventId=tPurseParking">
+     			<span class="tab-inner">tPortmonetka - parkowanie</span>
+     		</a>
+     	</li>
+     
+     	
+     
+     	
+     	
+     		
+     		
+     			
+     			
+     		
+     	
+     	
+     	<li  >
+     		<a href="/SOP/account/transaction_history.jspb?execution=e3s4&_eventId=tPurseBalance">
+     			<span class="tab-inner">tPortmonetka - razem</span>
+     		</a>
+     	</li>
+     
+     	
+     
+     	
+     	
+     		
+     		
+     			
+     			
+     		
+     	
+     	
+     	<li  >
+     		<a href="/SOP/account/transaction_history.jspb?execution=e3s4&_eventId=periodicTicket">
+     			<span class="tab-inner">Bilety okresowe</span>
+     		</a>
+     	</li>
+     
+     	
+     
+     	
+     	
+     		
+     		
+     			
+     			
+     		
+     	
+     	
+     	<li  >
+     		<a href="/SOP/account/transaction_history.jspb?execution=e3s4&_eventId=invoices">
+     			<span class="tab-inner">Faktury</span>
+     		</a>
+     	</li>
+     
+     
+ </ul>
+
+					
+				<div class="box box-border">
+					<div class="box-content">
+						
+								
+						<table class="table-profile" cellspacing="0" cellpadding="0" id="dataTable">
+							<thead>
+								<tr>
+									<th colspan="7"></th>
+								</tr>
+								<tr>
+									<th>Lp</th>
+									<th style ="min-width:90px">Data</th>
+									<th style ="min-width:150px">Godzina przyłożenia karty do czytnika</th>
+									<th>Liczba przejechanych przystanków</th>
+									<th>Uprawnienie do ulgi</th>
+									<th>Opłaty za osoby towarzyszące</th>
+									<th>Opłata za przejazd</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								
+									<tr >
+										<td>
+											
+											
+											
+												1
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13:35
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												2
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:47
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												3
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												18:46
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,34
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												4
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												18:39
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												2
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,10
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												5
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:29
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												6
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:49
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												3
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,60
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												7
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												16:56
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,84
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												8
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:36
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,92
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												9
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												08-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:29
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												10
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												07-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12:40
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												11
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												07-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:55
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,82
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												12
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												07-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:32
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												13
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												21:56
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,00
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												14
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20:52
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												35
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,00
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												15
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20:13
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												26
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,00
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												16
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:32
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												24
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,00
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												17
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:07
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,40
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												18
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												18:44
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,84
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												19
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:59
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													3,20
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												20
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:46
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												2
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,10
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												21
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14:31
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,30
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												22
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14:19
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,34
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												23
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13:42
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												16
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,38
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												24
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13:16
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												2
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,10
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												25
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12:02
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												26
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												05-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												18:02
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												27
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												04-07-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10:51
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												28
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												30-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:10
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												29
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												30-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10:33
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												7
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,60
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												30
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20:26
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												2
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,16
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												31
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:59
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,48
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												32
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:42
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												6
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,44
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												33
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:37
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												1
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,50
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												34
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:19
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												2
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,10
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												35
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												29-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												16:48
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												36
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												23-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10:12
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												37
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												22-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:53
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												8
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,68
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												38
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												22-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:27
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												39
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												21-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												19:44
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												8
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,68
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												40
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												16:53
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												41
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												15:45
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												1 Normalny 
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													3,96
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												42
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												15:45
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												21
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													0,60
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												43
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12:43
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												1 Normalny 
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													4,04
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												44
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												20-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12:29
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												6
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												1 Normalny 
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													4,88
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												45
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												15-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5:53
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												5
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,28
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												46
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												18:31
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												8
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,68
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												47
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14:54
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												8
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,68
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												48
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												13-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:29
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												49
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												12:32
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												50
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												10-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9:16
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												51
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												06-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												16:38
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												3
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,60
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												52
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												03-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												14:31
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												53
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												02-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												18:46
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												4
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													1,94
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												54
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												02-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:26
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												55
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												01-06-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												11:37
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+									<tr >
+										<td>
+											
+											
+											
+												56
+											
+											
+											
+										</td>
+										<td>
+ 											<div class="divHeight">
+												31-05-2016
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												17:20
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												9
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												Ulga 0 procent
+											</div>
+										</td>
+										<td>
+ 											<div class="divHeight">
+												
+											</div>
+										</td>
+										<td>
+																									
+ 											<div class="divHeight">
+																											
+													2,76
+												
+																									
+											</div>
+										</td>  											
+									</tr>
+								
+							</tbody>
+							<tfoot>
+								<tr>
+									<th colspan="7"></th>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			
+
+
+
+<div id="footer">
+	<div class="footer-line">
+		<img src="/SOP/img/logo/peka-gray.png" alt="PEKA" class="logo" />
+		
+		<ul class="footer-menu">
+			<li><a href="http://bip.poznan.pl/" class="link-icon icon-bulletin">Biuletyn Informacji<br/>Publicznej</a></li>
+			<li><a href="http://ztm.poznan.pl/" class="link-icon icon-ztm">Zarząd Transportu<br/>Miejskiego w Poznaniu</a></li>
+			<li><a href="http://www.ztm.poznan.pl/inwestycje/peka-informacje-o-projekcie/#4" class="link-icon icon-ue">Dotacje Unijne</a></li>
+			<li><a class="link-icon icon-contact" href="http://www.peka.poznan.pl/web/portal/formularz-kontaktowy">Kontakt</a></li>
+		</ul>
+	</div>
+
+	<div class="footer-line no-border ue-logo">
+		<img src="/SOP/img/logo/ue-logo.png" alt="" />
+	</div>
+
+	<div class="footer-line no-border ue-info">Projekt współfinansowany przez Unię Europejską z Europejskiego Funduszu Rozwoju Regionalnego w ramach Wielkopolskiego Regionalnego Programu Operacyjnego na lata 2007 - 2013 <strong>FUNDUSZE EUROPEJSKIE - DLA ROZWOJU INNOWACYJNEJ WIELKOPOLSKI</strong>
+	</div>
+</div>
+			
+		</div>
+	</body>
+</html>

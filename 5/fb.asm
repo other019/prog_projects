@@ -15,61 +15,117 @@ section .text
     mov ah, 4Ch
     mov al, 00h
     int 21h
+    
   write_int:
+  
+;mov si, bp
+;sub si, cx
+;mov [si],dx ;asign reminder of division to buffer 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ; WRITE INTEGER TO STANDARD INPUT   ;
     ; FROM BX REGISTER                  ;
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      mov cl, 01h
-      mov ch, 0Ah
+      %define BUFF_SIZE 6
+      %define D [bp-2*BUFF_SIZE]
+      %define A [bp-(2*BUFF_SIZE+2)]
       ;create stack frame
       push bp
       mov bp, sp
       push bp
-      ;push bx to local variable
-      ;reserve 2bytes
-      sub esp,02h
-      mov WORD[ebp-2],bx ;pushing our number
-      push 0
-      ;set bl to 4
-      mov bl, 04h ;number of places we need
-    .loop1:
-      mov ax, WORD [ebp-2] ;get our number
-      div ch
-      push ax
-      mov ax,WORD [ebp-2]
-      div cl ;;bug jest tutaj trzeba sprawdzic w której połowce co jest po dzielniu
-      pop dx
-      sub dh, ah
-      ; było sub ah,dh
-      ;; czy to na pewno zeruję dobrą połówkę
-      ;;cos za duzo na stos wrzucam
+      ;allocating memory on stack for buffer
+      sub sp,2*BUFF_SIZE
+      ;allocate memory on stack for var I and A
+      sub sp,04h
+      
+      mov A,bx ;save the orginal value
     
-      and ax, 0Fh
-      add ax,'0'
-      push ax
-      mov ax, 00h
-      mov al, cl
-      mov cl, 0Ah
-      mul cl
-      mov cl,al
-      mov ax, 00h
-      mov al, ch
-      mov ch, 0Ah
-      mul ch
-      mov ch,al
-      cmp bl,0
-      je .write
-      dec bl
+    ;setting buff to 0
+    mov cx, BUFF_SIZE
+    .loop1:
+      mov [bp-cx],0
+      dec cx
+      cmp cx,0
+      jz .end_loop1
       jmp .loop1
-    .write:
+      
+    .end_loop1:
+      mov cx,0
+      mov bx,10
+      
+    .loop2:
       mov dx,0
-      pop dx
-      cmp dx, 0
+      mov ax,A
+      div bx
+      mov [bp-cx],dx ;asign reminder of division to buffer
+      mov ax,bx
+      mul 10
+      mob bx,ax
+      inc cx
+      cmp cx,BUFF_SIZE
+      je .end_loop2
+      jmp .loop2
+      
+    .end_loop2:
+      mov cx,BUFF_SIZE
+      
+    .loop3:
+      mov bx,[bp-cx]
+      mov dx,[bp-cx+1]
+      sub bx,dx
+      mov [bp-cx],bx
+      dec cx
+      cmp cx,00h
+      jz .end_loop3
+      jmp .loop3
+      
+    .end_loop3:
+      mov D, 01h
+      mov cx,00h
+      
+    .loop4:
+      mov ax,[bp-cx]
+      mov dx,00h
+      mov bx,D
+      div bx
+      mov [bp-cx],ax
+      
+      mov ax,D
+      mul 10
+      mov D,ax
+      
+      inc cx    
+      cmp cx,BUFF_SIZE
+      je .end_loop4
+      jmp .loop4
+      
+    .end_loop4:
+      mov cx,0
+      push 0
+      
+    .loop5:
+      mov bx,[bp-cx]
+      add bx,30h
+      push bx
+      inc cx
+      cmp cx,BUFF_SIZE
+      je .end_loop5
+      jmp .loop5
+    
+    .end_loop5:
+      pop bx
+      cmp bx,30h
+      je .end_loop5
+      jmp .write
+      
+    .write  
+      pop bx
+      cmp bx,0
       je .end
-      mov ah, 02h
+      mov ah,02h
+      mov dl,bl
       int 21h
       jmp .write
+      
     .end:
       ;destroy the stack frame
       mov sp, bp
